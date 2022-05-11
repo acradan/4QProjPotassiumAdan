@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta name="author" content="ADAN, Andre Craig R."> <!-- This is me!-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="HTML, Javascript, Compsci Q1 Project">
+		<meta name="revised" content="10/5/2021"> <!-- Date today -->
+        <title>Musical Genre Guessing</title> 
+        <link rel="shortcut icon" type="image/jpg" href="CRAIG PUT SOMETHING HERE"/>
+        <link rel="stylesheet" type="text/css" href="qtr4ProjStyle.css">
+    </head>
+        <body>
+            <hr><hr><hr><hr><hr><hr><hr><hr> <!--Horizontal lines for the headers/footers-->
+
+
+
+                <h1><b>Quiz Time!</b></h1>
+                <br>
+                <h2><b><u>What is your preferred genre?</u></b></h2>
+                <form onsubmit="return calculatePoints()" onreset="return resetPoints()">
+                    <div>
+                        <hr>
+                        <p>Is your music usually loud and exciting?</p>
+                        <input type="radio" name="question1" id="Yes1" value="Yes1">
+                        <label for="Yes1">Yes</label> <br>
+                        <input type="radio" name="question1" id="No1" value="No1">
+                        <label for="No1">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Does your genre usually have lyrics?</p>
+                        <input type="radio" name="question2" id="Yes2" value="Yes2">
+                        <label for="Yes2">Yes</label> <br>
+                        <input type="radio" name="question2" id="No2" value="No2">
+                        <label for="No2">No</label> <br>
+                        <br> <br> <hr>
+                        <p> (Checkboxes) Do you usually listen to this genre while:</p>
+                        <input type="checkbox" name="question3" id="exercising"value="exercising">
+                        <label for="exercising">Exercising</label> <br>
+                        <input type="checkbox" name="question3" id="studying" value="studying">
+                        <label for="studying">Studying</label> <br>
+                        <input type="checkbox" name="question3" id="relaxing" value="relaxing">
+                        <label for="relaxing">Relaxing</label> <br>
+                        <input type="checkbox" name="question3" id="outside" value="outside">
+                        <label for="outside">Outside</label> <br> 
+                        <br> <br> <hr>
+                        <p>Does your preferred genre have a slow rhythm?</p>
+                        <input type="radio" name="question4" id="Yes4" value="Yes4">
+                        <label for="Yes4">Yes</label> <br>
+                        <input type="radio" name="question4" id="No4" value="No4">
+                        <label for="No4">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Does your preferred genre have a lot of strings? (Violin, Cello, Guitar, etc)</p>
+                        <input type="radio" name="question5" id="Yes5" value="Yes5">
+                        <label for="Yes5">Yes</label> <br>
+                        <input type="radio" name="question5" id="No5" value="No5">
+                        <label for="No5">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Does your preferred genre have a lot of drum percussion? (Instruments usually from a standard modern drum kit like a bass drum, snare, toms, hi-hats and cymbals)</p>
+                        <input type="radio" name="question6" id="Yes6" value="Yes6">
+                        <label for="Yes6">Yes</label> <br>
+                        <input type="radio" name="question6" id="No6" value="No6">
+                        <label for="No6">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Is the genre relatively new? (popularized around the last 100 years)</p>
+                        <input type="radio" name="question7" id="Yes7" value="Yes7">
+                        <label for="Yes7">Yes</label> <br>
+                        <input type="radio" name="question7" id="No7" value="No7">
+                        <label for="No7">No</label> <br>
+                        <br> <br> <hr>
+                        <p>What songs would you choose to listen to? (Click to View Youtube Links)</p>
+                        <input type="radio" name="question8" id="kathangIsip" value="kathangIsip">
+                        <label for="kathangIsip"><a href="https://www.youtube.com/watch?v=sKa8HtWgOxk" target="_blank">Kathang Isip - Ben&Ben</a></label> <br>
+                        <input type="radio" name="question8" id="wonderfulWorld" value="wonderfulWorld">
+                        <label for="wonderfulWorld"><a href="https://www.youtube.com/watch?v=rBrd_3VMC3c" target="_blank">What a Wonderful World - Louis Armstrong</a></label> <br>
+                        <input type="radio" name="question8" id="paradise" value="paradise">
+                        <label for="paradise"><a href="https://www.youtube.com/watch?v=DEy6EuZp9IY" target="_blank">Paradise - John Prine</a></label> <br>
+                        <br> <br> <hr>
+                        <p>Which artist/group out of these would you say you would prefer over the others?</p>
+                        <input type="radio" name="question9" id="Beatles" value="Beatles">
+                        <label for="Beatles">The Beatles</label> <br>
+                        <input type="radio" name="question9" id="BTS" value="BTS">
+                        <label for="BTS">BTS</label> <br>
+                        <input type="radio" name="question9" id="Chainsmokers" value="Chainsmokers">
+                        <label for="Chainsmokers">The Chainsmokers</label> <br>
+                        <input type="radio" name="question9" id="SnG" value="SnG">
+                        <label for="SnG">Simon & Garfunkel</label> <br>
+                        <br> <br> <hr>
+                        <p>Does the music you listen to have a somewhat loose feeling to it? Is improv usually encouraged?</p>
+                        <input type="radio" name="question10" id="Yes10" value="Yes10">
+                        <label for="Yes10">Yes</label> <br>
+                        <input type="radio" name="question10" id="No10" value="No10">
+                        <label for="No10">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Is the music you listen to very mainstream?</p>
+                        <input type="radio" name="question11" id="Mainstream" value="Mainstream">
+                        <label for="Mainstream">Mainstream</label> <br>
+                        <input type="radio" name="question11" id="Fringe" value="Fringe">
+                        <label for="Fringe">Fringe (Not too part of the mainstream flow)</label> <br>
+                        <br> <br> <hr>
+                        <p>Are you a fan of filipino music like "Ang Huling El Bimbo" or P-pop like from the band "Ben&Ben"?</p>
+                        <input type="radio" name="question12" id="Yes12" value="Yes12">
+                        <label for="Yes12">Yes</label> <br>
+                        <input type="radio" name="question12" id="No12" value="No12">
+                        <label for="No12">No</label> <br>
+                        <br> <br> <hr>
+                        <p>What sounds like the most appealing to listen to?</p>
+                        <input type="radio" name="question13" id="Chiptune" value="Chiptune">
+                        <label for="Chiptune">A Chiptune Video Game OST</label> <br>
+                        <input type="radio" name="question13" id="Love" value="Love">
+                        <label for="Love">A Sweet Love Song</label> <br>
+                        <input type="radio" name="question13" id="Orchestra" value="Orchestra">
+                        <label for="Orchestra">A Swelling Orchestra</label> <br>
+                        <input type="radio" name="question13" id="Guitar" value="Guitar">
+                        <label for="Guitar">An Agressive Electric Guitar Solo</label> <br>
+                        <br> <br> <hr>
+                        <p>Does your preferred genre usually have some piano?</p>
+                        <input type="radio" name="question14" id="Yes14" value="Yes14">
+                        <label for="Yes14">Yes</label> <br>
+                        <input type="radio" name="question14" id="No14" value="No14">
+                        <label for="No14">No</label> <br>
+                        <br> <br> <hr>
+                        <p>Do you like jazz?</p>
+                        <input type="radio" name="question15" id="Yes15" value="Yes15">
+                        <label for="Yes15">Yes</label> <br>
+                        <input type="radio" name="question15" id="No15" value="No15">
+                        <label for="No15">No</label> <br>
+                        <br> <br> <hr>
+                        <p><b><u>End of quiz!</u></b></p>
+                        <center>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                        </center>
+                    </div>
+                </form>
+
+                <p id="genreOutput"></p><!--For Debugging-->
+
+                <script>
+                var pop = 0;
+                var rock = 0;
+                var jazz = 0;
+                var classical = 0;
+                var edm = 0;
+                var folk = 0;
+                var chosenGenre;
+
+                    function resetPoints() {
+                        pop = 0; rock = 0; jazz = 0; classical = 0; edm = 0; folk = 0;
+                    }
+                    function calculatePoints() {
+                        if (document.getElementById('Yes1').checked) {
+                            pop++; rock++; edm++;
+                        }
+                        if (document.getElementById('No1').checked) {
+                            jazz++; classical++; folk++;
+                        }
+                        if (document.getElementById('Yes2').checked) {
+                            pop++; rock++; folk++;
+                        }
+                        if (document.getElementById('No2').checked) {
+                            classical++;
+                        }
+                        if (document.getElementById('exercising').checked) {
+                            rock++; edm++;
+                        }
+                        if (document.getElementById('studying').checked) {
+                            jazz++; classical++;
+                        } 
+                        if (document.getElementById('relaxing').checked) {
+                            jazz++; classical++; pop++; folk++;
+                        }
+                        if (document.getElementById('outside').checked) {
+                            pop++; edm++; folk++; jazz++;
+                        }
+                        if (document.getElementById('Yes4').checked) {
+                            jazz++; folk++;
+                        }
+                        if (document.getElementById('No4').checked) {
+                            rock++; edm++;
+                        }
+                        if (document.getElementById('Yes5').checked) {
+                            rock++; jazz++; classical++;
+                        }
+                        if (document.getElementById('No5').checked) {
+                           edm++;
+                        }
+                        if (document.getElementById('Yes6').checked) {
+                            pop++; rock++; jazz++; folk;
+                        }
+                        if (document.getElementById('No6').checked) {
+                            edm++; classical++;
+                        }
+                        if (document.getElementById('Yes7').checked) {
+                            pop++; rock++; edm++;
+                        }
+                        if (document.getElementById('No7').checked) {
+                            jazz++; classical++; folk++;
+                        }
+                        if (document.getElementById('kathangIsip').checked) {
+                            pop++; folk;
+                        }
+                        if (document.getElementById('wonderfulWorld').checked) {
+                            jazz++; folk;
+                        }
+                        if (document.getElementById('paradise').checked) {
+                            folk++;
+                        }
+                        if (document.getElementById('Beatles').checked) {
+                            jazz++; rock++;
+                        }
+                        if (document.getElementById('BTS').checked) {
+                            edm++; pop++;
+                        }
+                        if (document.getElementById('Chainsmokers').checked) {
+                            edm++;
+                        }
+                        if (document.getElementById('SnG').checked) {
+                            folk++;
+                        }
+                        if (document.getElementById('Yes10').checked) {
+                            jazz++;
+                        }
+                        if (document.getElementById('No10').checked) {
+                            pop++; classical++; folk++; edm++; rock++;
+                        }
+                        if (document.getElementById('Mainstream').checked) {
+                            pop++;
+                        }
+                        if (document.getElementById('Fringe').checked) {
+                            classical++;
+                        }
+                        if (document.getElementById('Yes12').checked) {
+                            pop++; folk++;
+                        }
+                        if (document.getElementById('No12').checked) {
+                            jazz++; classical++; rock++; edm++;
+                        }
+                        if (document.getElementById('Chiptune').checked) {
+                            edm++;
+                        }
+                        if (document.getElementById('Love').checked) {
+                            jazz++; pop++; folk++;
+                        }
+                        if (document.getElementById('Orchestra').checked) {
+                            classical++;
+                        }
+                        if (document.getElementById('Guitar').checked) {
+                            rock++;
+                        }
+                        if (document.getElementById('Yes14').checked) {
+                            jazz++; folk++; classical++;
+                        }
+                        if (document.getElementById('No14').checked) {
+                            rock++; edm++;
+                        }
+                        if (document.getElementById('Yes15').checked) {
+                            jazz++;
+                        }
+                        if (document.getElementById('No15').checked) {
+                            jazz--;
+                        }
+                        chosenGenre = Math.max(pop, rock, jazz, classical, edm, folk);
+                        //These are placeholder outputs for when I actually have the websites that describe the chosen genre.
+                        if (pop === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "Pop!" + "</b>";
+                        } else if (rock === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "Rock!" + "</b>";
+                        } else if (jazz === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "Jazz!" + "</b>";
+                        } else if (classical === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "Classical!" + "</b>";
+                        } else if (edm === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "EDM!" + "</b>";
+                        } else if (folk === chosenGenre) {
+                            document.getElementById('genreOutput').innerHTML = "We think your favorite genre is " + "<b>" + "Folk!" + "</b>";
+                        }
+                        window.alert("Pop: " + pop + " Rock: " + rock + " Jazz: " + jazz + " Classical: " + classical + " EDM: " + edm + " Folk: " + folk);
+                        return false;
+                    }
+                </script>
+
+
+                <div class="header">
+                <p class="headerp">Link to the Other Webpages:</p>
+                <ol>
+                    <li class="headerlist"><a href="index.html"> Introduction</a></li>
+                    <li class="headerlist"><a href="quizPrompt.html"> Quiz Start!</a></li>
+                    <li class="headerlist"><a href="Section3.html"> References</a></li> <!--We don't have a reference page yet-->
+                    <!--Will add the pages about the different genres in the future-->
+                </ol>
+                </div>
+            </div>
+        </body>
+</html>
